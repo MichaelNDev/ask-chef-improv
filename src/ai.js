@@ -14,7 +14,7 @@ export async function getRecipeFromMistral(ingredientsArr) {
             model: "mistralai/Mixtral-8x7B-Instruct-v0.1",
             messages: [
                 { role: "system", content: SYSTEM_PROMPT },
-                { role: "user", content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make! Don't bother saying "Sure, I'd be happy to help!". Just get straight to the point.` },
+                { role: "user", content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make! Don't bother saying "Sure, I'd be happy to help!".` },
             ],
             max_tokens: 1024,
         })

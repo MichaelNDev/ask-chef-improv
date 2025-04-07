@@ -210,6 +210,11 @@ ul.ingredients-list > li {
     .add-ingredient-form > input {
         max-width: auto;
     }
+
+    .title h3 {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
     
 }
 
@@ -249,4 +254,5 @@ ul.ingredients-list > li {
     .markdown {
         margin-bottom: 10px;
     }
+
 }

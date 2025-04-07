@@ -14,7 +14,7 @@ export default function Main(){
     const [recipe, setRecipe] = React.useState("")
 
     async function getRecipe() {
-        const recipeMarkdown = await getRecipeFromGoogle(ingredients)
+        const recipeMarkdown = await getRecipeFromMistral(ingredients)
         setRecipe(recipeMarkdown)
     }
 
@@ -27,6 +27,7 @@ export default function Main(){
         setIngredients([])
         setRecipe("")
     }
+
 
 
     return (
@@ -48,6 +49,7 @@ export default function Main(){
                 <IngredientsList 
                     ingredients={ingredients}
                     getRecipe={getRecipe}
+                    recipe={recipe}
                 />
             }
             {recipe && <HuggingRecipe recipe={recipe} />}
